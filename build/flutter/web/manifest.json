@@ -1,0 +1,35 @@
+{
+    "name": "\u5de5\u4e1aCT\u9009\u578b\u901f\u67e5",
+    "short_name": "\u5de5\u4e1aCT\u9009\u578b\u901f\u67e5",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#FF005F",
+    "description": "\u5de5\u4e1aCT\u5de5\u4ef6\u6750\u8d28\u53c2\u6570\u9884\u8bbe\u4e0e\u9009\u578b\u5de5\u5177",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

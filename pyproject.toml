@@ -1,0 +1,12 @@
+[project]
+name = "工业CT选型速查"
+version = "1.0.0"
+description = "工业CT工件材质参数预设与选型工具"
+
+[tool.flet]
+product_name = "工业CT选型速查"
+org_name = "ct.tools"
+
+[tool.flet.android]
+extra_packages = ["matplotlib==3.11.2", "pandas==2.2.2", "openpyxl"]
+extract_packages = ["matplotlib"]
