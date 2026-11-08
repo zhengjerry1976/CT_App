@@ -8,7 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    # 整个任务最多 45 分钟，卡死自动失败，绝不再跑 2 小时
+    # 强制适配 Node 24（消除警告，防未来报错）
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     timeout-minutes: 45
 
     steps:
@@ -19,6 +21,14 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Install Flutter SDK (Mirror)
+        run: |
+          # 使用清华/中科大镜像下载 Flutter（避坑境外网络）
+          wget -q https://mirrors.tuna.tsinghua.edu.cn/flutter/flutter_infra_release/releases/stable/linux/flutter_linux_3.24.5-stable.tar.xz -O flutter.tar.xz
+          tar -xf flutter.tar.xz -C $HOME
+          echo "$HOME/flutter/bin" >> $GITHUB_PATH
+          flutter --version
 
       - name: Install Flet & Dependencies
         run: |
